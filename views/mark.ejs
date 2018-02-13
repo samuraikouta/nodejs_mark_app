@@ -7,8 +7,14 @@
 
 <body>
     <h1><%= title %></h1>
-    <h2><%= head %></h2>
+    <h2><%- head %></h2>
     <form method="post" action="/mark/<%= id %>">
+        <table>
+            <tr><th>TITLE</th></tr>
+            <tr><td>
+                <textarea name="title" cols="60" rows="2"><%= head %></textarea>
+            </td></tr>
+        </table>
         <table>
             <tr><th>SOURCE</th></tr>
             <tr><td>

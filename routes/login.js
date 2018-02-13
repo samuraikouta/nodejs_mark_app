@@ -18,7 +18,10 @@ var User = Bookshelf.Model.extend({
 router.get('/', (req, res, next) => {
     var data = {
         title: 'Login',
-        form: {name: '', password: ''},
+        form: {
+            name: '',
+            password: ''
+        },
         content: '名前とパスワードを入力下さい。'
     }
     res.render('login', data);

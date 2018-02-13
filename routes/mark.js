@@ -50,7 +50,7 @@ router.post('/:id', (req, res, next) => {
     var request = req;
     var response = res;
     var obj = new Markdata({id: req.params.id})
-        .save({content: req.body.source}, {patch: true})
+        .save({title: req.body.title, content: req.body.source}, {patch: true})
         .then((model) => {
             makepage(request, response, model, false);
         });
